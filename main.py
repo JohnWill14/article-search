@@ -7,7 +7,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
-from nltk.stem import 	WordNetLemmatizer
+from nltk.stem import WordNetLemmatizer
 
 import re
 import string
@@ -19,12 +19,19 @@ def readPdf(path):
     number_of_pages = len(reader.pages)
 
     text = ""
-
     for i in range(number_of_pages):
         page = reader.pages[i]
         text += page.extract_text()
 
     return text.strip()
+
+def extractInfoFromPdf(path):
+    reader = PdfReader(path)
+    title = reader.metadata.title
+    if(title==None or title=="untitled"):
+        title = clean_text(os.path.basename(path).replace(".pdf",""))
+    return title
+
 
 
 def tokenizeText(text):
@@ -43,7 +50,8 @@ def clean_text(text):
     text_nonum = re.sub(r'\d+', '', text)
     # remove punctuations and convert characters to lower case
     text_nopunct = "".join([char for char in text_nonum if char not in string.punctuation])
-    return text_nopunct
+    return text_nopunct.strip()
+
 
 def stemming(tokens):
     ans = []
@@ -52,6 +60,7 @@ def stemming(tokens):
         ans.append(ps.stem(w))
     return ans
 
+
 def lemmatize(tokens):
     ans = []
     wnl = WordNetLemmatizer()
@@ -59,13 +68,16 @@ def lemmatize(tokens):
         ans.append(wnl.lemmatize(w))
     return ans
 
+
 def extractFreq(tokens):
     return nltk.FreqDist(tokens)
+
 
 def extractReferences(text):
     refrences = "".join(re.findall("(?s)REFERENCES(.*)", text)).strip()
     index = refrences.rfind(".")
-    return refrences[0:index+1]
+    return refrences[0:index + 1]
+
 
 if __name__ == '__main__':
     nltk.download('stopwords')
@@ -103,7 +115,7 @@ if __name__ == '__main__':
     for filename in listdir:
 
         if filename.endswith(".pdf"):
-            path = pathDir +os.sep+ filename
+            path = pathDir + os.sep + filename
 
             # read
             text = readPdf(path)
@@ -128,6 +140,7 @@ if __name__ == '__main__':
             most_common10 = freq.most_common(10)
 
             print("PDF: ", cont)
-            cont+=1
+            print(extractInfoFromPdf(path))
+            cont += 1
             for key in most_common10:
                 print(key)
