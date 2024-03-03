@@ -9,6 +9,9 @@ from nlpUtil import prepareTextFromPath
 
 from nlpUtil import searchBm25
 
+
+import hashlib
+
 import numpy
 
 search = ""
@@ -88,13 +91,34 @@ def loadItensFromFile():
     except:
         return []
 
+def itemClicked(item):
+    row = item.row()
+    text = main.tableWidget.item(row, 0).text()
+    h = hashlib.shake_256(text.encode())
+    id = h.hexdigest(20)
+
+    for json in datas:
+        if json['id'] == id:
+            item = json
+            break
+
+
+    article.labelTitle.setText(item['title'])
+    article.textObjective.setText(item['objective'])
+    article.textMethod.setText(item['method'])
+    article.textMethod.setText(item['problem'])
+
+    print("oi")
+
+    article.show()
+
 if __name__ == "__main__":
     datas = loadItensFromFile()
-
 
     app = QtWidgets.QApplication([])
     main = uic.loadUi('main.ui')
 
+    article = uic.loadUi('article.ui')
     setFrame(datas)
 
     main.actionExit.triggered.connect(main.close)
@@ -102,6 +126,8 @@ if __name__ == "__main__":
 
     updateTable(datas)
     main.searchButton.clicked.connect(search)
+
+    main.tableWidget.itemClicked.connect(itemClicked)
 
     main.show()
     app.exec()
