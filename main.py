@@ -1,250 +1,107 @@
-from PyPDF2 import PdfReader
-
-import os
-from os import listdir
-
-import nltk
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from nltk.stem import PorterStemmer
-from nltk.stem import WordNetLemmatizer
-from nltk.collocations import BigramCollocationFinder
-
-import re
-import string
+from PyQt5 import uic, QtWidgets
+from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
 
 import json
 
-def readPdf(path):
-    reader = PdfReader(path)
+from nlpUtil import process_papers
+from fileUtil import write_datas
+from nlpUtil import prepareTextFromPath
 
-    number_of_pages = len(reader.pages)
+from nlpUtil import searchBm25
 
-    text = ""
-    for i in range(number_of_pages):
-        page = reader.pages[i]
-        text += page.extract_text()
+import numpy
 
-    return text.strip()
+search = ""
+textsTokens = []
 
-def extractInfoFromPdf(path):
-    reader = PdfReader(path)
-    title = reader.metadata.title
-    if(title==None or title=="untitled"):
-        title = clean_text(os.path.basename(path).replace(".pdf",""))
-    return title
+def openFile():
+    filenames, _ = QFileDialog.getOpenFileNames()
+    papers_datas = process_papers(filenames)
+    given_repeticion = []
+    for paper in papers_datas:
+        for  item in datas:
+            if item["id"] == paper["id"]:
+                given_repeticion.append(item)
+                break
 
+    for item in given_repeticion:
+        datas.remove(item)
 
+    datas.extend(papers_datas)
+    write_datas(datas)
+    loadItensFromFile()
+    search()
 
-def tokenizeText(text):
-    return word_tokenize(text.lower())
-
-
-def removeStopWords(tokens):
-    english_stopwords = stopwords.words('english')
-    wordsWithoutStopWords = [t for t in tokens if t not in english_stopwords]
-    wordsClear = [clean_text(w) for w in wordsWithoutStopWords]
-    return [w for w in wordsClear if w != '']
-
-
-def clean_text(text):
-    # remove numbers
-    text_nonum = re.sub(r'\d+', '', text)
-    # remove punctuations and convert characters to lower case
-    text_nopunct = "".join([char for char in text_nonum if char not in string.punctuation])
-    return text_nopunct.strip()
-
-
-def stemming(tokens):
+def search():
+    query = main.stringline.text()
+    print("Searching...", query)
+    if len(textsTokens) == 0:
+        for item in datas:
+            tokens = prepareTextFromPath(item['path'])
+            textsTokens.append(tokens)
     ans = []
-    ps = PorterStemmer()
-    for w in tokens:
-        ans.append(ps.stem(w))
-    return ans
+    if query != "":
+        freq = searchBm25(query, textsTokens)
+        print(freq)
+        novaFreq = {}
+        for idx, item in enumerate(freq):
+            novaFreq.update({idx: item})
+
+        list_Index = {k: v for k, v in sorted(novaFreq.items(), key=lambda item: item[1], reverse=True)}
+
+        for i in list_Index:
+            if(novaFreq[i] != 0):
+                ans.append(datas[i])
+    else:
+        ans = datas
+
+    setFrame(ans)
+    updateTable(ans)
+def setFrame(datas):
+    if len(datas) == 0:
+        main.frame.close()
+        main.frame_progress.close()
+    else:
+        main.frame.show()
+        main.frame_progress.show()
+
+def updateTable(datasForTable):
+    datasTable = []
+    for item in datasForTable:
+        data = {"name": item['title']}
+
+        datasTable.append(data)
+
+    main.tableWidget.setRowCount(len(datasTable))
+
+    row = 0
+    for e in datasTable:
+        main.tableWidget.setItem(row, 0, QTableWidgetItem(e['name']))
+        row += 1
+
+def loadItensFromFile():
+    texts = []
+    try:
+        with open('data.txt', 'r') as myfile:
+            data = myfile.read()
+        return json.loads(data)
+    except:
+        return []
+
+if __name__ == "__main__":
+    datas = loadItensFromFile()
 
 
-def lemmatize(tokens):
-    ans = []
-    wnl = WordNetLemmatizer()
-    for w in tokens:
-        ans.append(wnl.lemmatize(w))
-    return ans
+    app = QtWidgets.QApplication([])
+    main = uic.loadUi('main.ui')
 
+    setFrame(datas)
 
-def extractFreq(tokens):
-    return nltk.FreqDist(tokens)
+    main.actionExit.triggered.connect(main.close)
+    main.actionadd_paper.triggered.connect(openFile)
 
+    updateTable(datas)
+    main.searchButton.clicked.connect(search)
 
-def extractReferences(text):
-    refrences = "".join(re.findall("(?s)REFERENCES(.*)", text)).strip()
-    index = refrences.rfind(".")
-    return refrences[0:index + 1]
-
-def extractAbstract(text):
-    find_abstract = text.find("Abstract")
-    find_keywords = text.find("I.")
-    return text[find_abstract:find_keywords]
-
-def extractIntro(text):
-    find_abstract = text.find("I.")
-    find_keywords = text.find("II.")
-    return text[find_abstract:find_keywords]
-def extractObjectiveByTerms(text):
-    word_keys =[
-        'this work',
-        'paper describe',
-        'This paper explain',
-        'This article explain',
-        "This paper describe",
-        'article describe',
-        'This work explain',
-        'work describe',
-        'This work propose',
-        'This paper propose',
-        'This article propose',
-        'This study',
-        'In this paper'
-    ]
-    word_keys = [w.lower() for w in word_keys]
-    sent_text = nltk.sent_tokenize(text.lower())
-    for sentence in sent_text:
-        s = sentence.replace('\n', "")
-        if any(substring in s for substring in word_keys):
-            return s
-    return "not found"
-
-def extractObjective(text):
-    abstract = extractAbstract(text)
-    objective = extractObjectiveByTerms(abstract).replace("abstract", "")
-
-    if objective == "not found":
-        intro = extractIntro(text)
-        return  extractObjectiveByTerms(intro).replace("abstract", "")
-
-    return objective
-
-def extractProblemByTerms(text):
-    word_keys =[
-        'this issue',
-        'this problem',
-        'issue',
-        'problem',
-        'Challenge',
-        'Dilemma',
-        'Impasse',
-        'Difficulty',
-        'Barrier',
-        'Hurdle',
-        'Conundrum'
-    ]
-    word_keys = [w.lower() for w in word_keys]
-    sent_text = nltk.sent_tokenize(text.lower())
-    for sentence in sent_text:
-        s = sentence.replace('\n', "")
-        if any(substring in s for substring in word_keys):
-            return s
-    return "not found"
-
-def extractProblem(text):
-    abstract = extractAbstract(text)
-    problem = extractProblemByTerms(abstract).replace("abstract", "")
-
-    if problem == "not found":
-        intro = extractIntro(text)
-        return  extractProblemByTerms(intro).replace("abstract", "")
-
-    return problem
-
-
-def extractMethodologyByTerms(text):
-    word_keys =[
-        'Based on',
-        'approach is'
-        'method',
-        'methodology',
-        'interviews',
-        'survey',
-        'content',
-        'analysis'
-    ]
-    word_keys = [w.lower() for w in word_keys]
-    sent_text = nltk.sent_tokenize(text.lower())
-    for sentence in sent_text:
-        s = sentence.replace('\n', "")
-        if any(substring in s for substring in word_keys):
-            return s
-    return "not found"
-
-def extractMethodology(text):
-    return  extractMethodologyByTerms(text)
-
-def article(title, most_common, objective, problem, method, references):
-    return {"title": title, "most_common": most_common, "objective": objective, "problem": problem, "method": method,
-     "references": references}
-def perform(path):
-    print(path)
-
-    # info
-    title = extractInfoFromPdf(path)
-    print(title)
-    # read
-    text = readPdf(path)
-    references = extractReferences(text)  # import
-    text = text.replace(references, "")
-
-    # token
-    tokens = tokenizeText(text)
-
-    # remove stop words
-    words_really_importants = removeStopWords(tokens)
-
-    # lemmatize
-    lemma = lemmatize(words_really_importants)
-
-    # stemming
-    ws = stemming(lemma)
-
-    # freq
-    freq = extractFreq(ws)
-
-    most_common10 = freq.most_common(20)  # import
-
-    # bigrama
-    bigram_measures = nltk.collocations.BigramAssocMeasures()
-    finder_bigram = BigramCollocationFinder.from_words(ws)
-
-    # print(finder_bigram.nbest(bigram_measures.pmi, 10))
-
-    # objective
-
-    objective = extractObjective(text)
-
-    # problem
-
-    problem = extractProblem(text)
-
-    # method
-    method = extractMethodologyByTerms(text)
-
-    return article(title, most_common10,objective,problem, method, references)
-
-if __name__ == '__main__':
-    nltk.download('stopwords')
-
-    pathDir = "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense"
-    listdir = listdir(pathDir)
-
-    cont = 1
-    infos = []
-    for filename in listdir:
-
-        if filename.endswith(".pdf"):
-            path = pathDir + os.sep + filename
-
-            l = perform(path)
-            output = json.dumps(l)
-            infos.append(output)
-    FILE_PATH = './data.txt'
-
-    with open(FILE_PATH, 'w') as output_file:
-            json.dump(infos, output_file, indent=2)
+    main.show()
+    app.exec()

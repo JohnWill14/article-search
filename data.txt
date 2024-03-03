@@ -1,0 +1,922 @@
+[
+  {
+    "id": "8ce40a7765115052f698f2716f2fe1d25640b2d1",
+    "title": "Off line writer identification based on graphometric parameters",
+    "pages": 5,
+    "most_common": [
+      [
+        "paramet",
+        46
+      ],
+      [
+        "writer",
+        29
+      ],
+      [
+        "system",
+        27
+      ],
+      [
+        "identif",
+        23
+      ],
+      [
+        "use",
+        22
+      ],
+      [
+        "figur",
+        21
+      ],
+      [
+        "base",
+        20
+      ],
+      [
+        "differ",
+        18
+      ],
+      [
+        "word",
+        18
+      ],
+      [
+        "featur",
+        17
+      ],
+      [
+        "network",
+        15
+      ],
+      [
+        "sampl",
+        15
+      ],
+      [
+        "write",
+        15
+      ],
+      [
+        "hampa",
+        15
+      ],
+      [
+        "obtain",
+        14
+      ],
+      [
+        "work",
+        13
+      ],
+      [
+        "neural",
+        13
+      ],
+      [
+        "\u2022",
+        13
+      ],
+      [
+        "box",
+        13
+      ],
+      [
+        "success",
+        12
+      ]
+    ],
+    "objective": " \u2014 in this work is proposed a writer identification approach based on graphometrical and forensic features.",
+    "problem": "the online identification of writers is more widespread than the offline, since provides temporal information that simplifies the classification problem.",
+    "method": "off line writer identification ba sed on graphometric parameters  jos\u00e9 l. v\u00e1squez*, carlos m. travieso** and jes\u00fas b. alonso**  * department of computer science university of costa rica sede del atl\u00e1ntico, turrialba, cartago, costa rica jose.vasquez@ucr.ac.cr  ** signals and communications department institute for technological development and innovation in communications university of las palmas de gran canaria campus university of tafira, 35017, las palmas de gran canaria, las palmas, spain { ctravieso, jalonso}@dsc.ulpgc.es     abstract \u2014 in this work is proposed a writer identification approach based on graphometrical and forensic features.",
+    "references": "[1] Jain Anil, Bolle Ruud and Sarta Pankanti,; Biometrics, Personal \nIdentification in Networked Society . Kluwer Academic Publishers, \n1999. \n[2] Francisco de Ant\u00f3n y Barber\u00e1, Francisco M\u00e9ndez Baquero; An\u00e1lisis \nde textos manuscritos, firmas y alteraciones documentales . Ed. Tirant \nlo blanch, 2005. \n[3] Siddiqi, I.; Vincent, N.; A Set of Chain Code Based Features for Writer Recognition . Document Analysis and Recognition, ICDAR \n'09. 10th International Conference,  pp. 981\u2013985, 2009. \n[4] Ali Rafiee, Hamidreza Motavalli; Off-Line Writer Recognition for \nFarsi Text . Sixth Mexican International Conference on Artificial \nIntelligence, Special Session, pp. 193-197, 2007. \n[5] Chanda, S.; Franke, K.; Pal, U. Text Independent Writer Identification for Oriya Script. 10th IAPR International Workshop on \nDocument Analysis Systems, pp. 369-373, 2012. [6] Hiremath, P.S.; Shivashankar, S.; Pujari, J.D.; Mouneswara, V.; \nScript Identification in a Handwritten Document Image Using Texture Features . Second International Advance Computing \nConference,  pp. 110-114, 2010. \n[7] Imdad, A.; Bres, S.; Eglin, V.; Emptoz, H.; Rivero-Moreno, C.; Writer Identification Using Steered Hermite Features and SVM. Document Analysis and Recognition. ICDAR 2007. Ninth \nInternational Conference. vol. 2, pp. 839-843, 2007. \n[8] Omar Santana Ram\u00edrez.; Identificador Off-line de Escritura \nManuscrita empleando T\u00e9cnicas Periciales Caligr\u00e1ficas . Proyecto \nfinal de carrera, Universidad de Las Palmas de G.C., 2008. \n[9] Wei Deng; Qinghu Chen; Yucheng Yan; Chunxiao Wan; Off- Line \nChinese Writer Identification Based on Character-Level Decision \nCombination . Information Processing (ISIP), 2008 International \nSymposiums, pp. 762\u2013 765, 2008. \n[10]  R. M. Bozinovic y S. N. Srihari.; Off-Line Cursive Script Word Recognition . En IEEE Transactions on Pattern Analysis and Machine \nIntelligence, vol. 2, pp. 68-83, 1989. \n[11]  Ruck, D.W.;   Rogers, S.K.;   Kabrisky, M.;   Oxley, M.E.;   Suter, B.W.;  The multilayer perceptron as an approximation to a Bayes \noptimal discriminant function. IEEE Transactions on Neural \nNetworks. vol. 1, Issue 4, pp. 296 \u2013 298 , Dec 1990. \n[12] Omar, S. Saad, Z. Osman, M.K. Isa, I. Saleh, J.M.; Improved \nClassification Performance for Multiple Multilayer Perceptron \n(MMLP) Network Using Voting Technique . Conference on \nMathematical/Analytical Modelling and Computer Simulation (AMS), 2010 Fourth Asia International. May 2010, Kota Kinabalu, \nMalaysia. ISBN: 978-1-4244-7196-6.   \n[13] Arlot, S.; A survey of cross-validation procedures for model selection . \nStatistics Surveys, 4, pp. 40-79, 2010. \n[14] Colina, E. and Rivas, F.; Redes Neuronales Artificiales in \nIntroducci\u00f3n a las T\u00e9cnicas de Computaci\u00f3n Inteligente . Jose Aguilar \nand Francklin Rivas Editors, Editorial Meritec, 2001. \n[15] Matlab Neural Network Toolbox, \nhttp://www.mathworks.com/products/neuralnet/, active on July 1st \n2011. \n[16] Bulacu, M.; Schomaker, L.; Tex\n t-Independent Writer Identification \nand Verification Using Textural and Allographic Features . Pattern \nAnalysis and Machine Intelligence, IEEE Transactions. vol. 29. pp. 701-717, 2007. \n[17] Wei Deng; Qinghu Chen; Yucheng Yan; Chunxiao Wan; Off- Line \nChinese Writer Identification Based on Character-Level Decision \nCombination . Information Processing (ISIP), 2008 International \nSymposiums, pp. 762\u2013 765, 2008. \n[18] Helli, B.; Moghaddam, M.E.; A Text-Independent Persian Writer \nIdentification System Using LCS Based Classifier . Signal Processing \nand Information Technology, 2008. ISSPIT 2008. IEEE International \nSymposium, pp. 203-206, 2008. \n[19] Al-Ma'adeed, S.; Mohammed, E.; Al Kassis, D.; Writer identification \nusing edge-based directional probability distribution features for arabic words . Computer Systems and Applications, 2008. AICCSA \n2008. IEEE/ACS International Conference,  pp. 582-590, 2008. \n[20] Liangshuo Ning; Long Zhou; Xinge You; Liang Du; Zhengyu He. Multiscale Gaussian Markov Random Fields for Writer Identification . \nInternational Conference on Wavelet Analysis and Pattern \nRecognition,  pp. 170-175, 2010. \n[21] Quang Anh Bui; Visani, M.; Prum, S.; Ogier, J. Writer Identification \nusing TF-IDF for Cursive Handwritten  Word Recognition. \nInternacional Conference on Document Analysis and Recognition, pp. 844-848, 2011. \n[22] Biswas, S.; Das, A.K. Writer Identification of Bangla Handwritings \nby Random Transform Projection Profile . 10th IAPR International \nWorkshop on Document Analysis Systems, pp. 215-219, 2012.",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/1 - Off line writer identification based on graphometric parameters.pdf"
+  },
+  {
+    "id": "17cbdc5c37887afab5d610393b00e8def41554d4",
+    "title": "Using calligraphies features for off line writer identification",
+    "pages": 6,
+    "most_common": [
+      [
+        "featur",
+        41
+      ],
+      [
+        "use",
+        35
+      ],
+      [
+        "write",
+        29
+      ],
+      [
+        "descend",
+        29
+      ],
+      [
+        "ascend",
+        28
+      ],
+      [
+        "figur",
+        26
+      ],
+      [
+        "\u221a",
+        26
+      ],
+      [
+        "word",
+        23
+      ],
+      [
+        "line",
+        22
+      ],
+      [
+        "obtain",
+        22
+      ],
+      [
+        "identif",
+        19
+      ],
+      [
+        "base",
+        19
+      ],
+      [
+        "success",
+        17
+      ],
+      [
+        "writer",
+        16
+      ],
+      [
+        "l",
+        16
+      ],
+      [
+        "angl",
+        16
+      ],
+      [
+        "rate",
+        15
+      ],
+      [
+        "differ",
+        15
+      ],
+      [
+        "extract",
+        15
+      ],
+      [
+        "letter",
+        15
+      ]
+    ],
+    "objective": " \u2014 this work proposes an off-line writer identification approach based on graphometrical and forensic features.",
+    "problem": "although this issue is not part of the present work, this property is considered important as it would be expected that the extracted features permit to identify a person, despite the natural variations that may occur to his writing, contributing to the robustness of the system.",
+    "method": "using calligraphies features for off line writer identification  jos\u00e9 l. v\u00e1squez*, carlos m. travieso** and jes\u00fas b. alonso**  * sede del atl\u00e1ntico, university of costa rica,  turrialba, cartago, costa rica jose.vasquez@ucr.ac.cr  ** signals and communications department institute for t echnological development and innovation in communications, university of las palmas de gran canaria, campus university of tafira, 35017  las palmas de gran canaria, las palmas, spain {ctravieso, jalonso}@dsc.ulpgc.es    abstract \u2014 this work proposes an off-line writer identification approach based on graphometrical and forensic features.",
+    "references": "[1] Jain Anil, Golnaz Ghiasi, Reza Safabakhsh, Offline Text-Independent \nWriter Identification Using Codebook and Efficient Code Extraction \nMethods, Image and Vision Computing . doi: \n10.1016/j.imavis.2013.03.002. (2013)  \n[2] G. Louloudis, B.Gatos and N. Stamatopoulos. ICFHR2012 Competition on Writer Identification Challenge 1 : Latin/Greek \nDocuments. International Conference on Frontiers in Handwriting \nRecognition 2012. \n[3] Francisco de Ant\u00f3n y Barber\u00e1, Francisco M\u00e9ndez Baquero; An\u00e1lisis \nde textos manuscritos, firmas y alteraciones documentales. Ed. Tirant \nlo blanch. 2005. \n[4] Siddiqi, I.; Vincent, N.; A Set of Chain Code Based Features for \nWriter Recognition . Document Analysis and Recognition, ICDAR \n'09. 10th International Conference. P\u00e1gs. (981\u2013985). 2009. \n[5] Ali Rafiee, Hamidreza Motavalli; Off-Line Writer Recognition for \nFarsi Text . Sixth Mexican International Conference on Artificial \nIntelligence, Special Session. P\u00e1gs. (193-197). 2007. \n[6] Chanda, S.; Franke, K.; Pal, U. Text Independent Writer Identification for Oriya Script. 10th IAPR International Workshop on \nDocument Analysis Systems. P\u00e1gs. (369-373). 2012. \n[7] Hiremath, P.S.; Shivashankar, S.; Pujari, J.D.; Mouneswara, V.; \nScript Identification in a Handwritten Document Image Using Texture Features . Second International Advance Computing \nConference. P\u00e1gs. (110-114). 2010. \n[8] Imdad, A.; Bres, S.; Eglin, V.; Emptoz, H.; Rivero-Moreno, C.; Writer Identification Using Steered Hermite Features and SVM. Document Analysis and Recognition. ICDAR 2007. Ninth \nInternational Conference. Vol. 2. P\u00e1gs. (839-843). 2007. \n[9] Vladimir Pervouchine and Graham Leedham.; Extraction and \nanalysis of forensic document examiner features used for writer \nidentification . Pattern Recognition Society, Elsevier Science Inc, \nSingapore, vol.40, pp. 1004-1013, March 2007. [10] O. Santana, C. Travieso, J. B. Alonso, M.A. Ferrer; Writer Identification Based on Graphology Techniques. IEEE A&E Systems \nMagazine, June 2010. \n[11] Wei Deng; Qinghu Chen; Yucheng Yan; Chunxiao Wan; Off- Line \nChinese Writer Identification Based on Character-Level Decision \nCombination . Information Processing (ISIP), 2008 International \nSymposiums, pp. 762\u2013 765, 2008. \n[12] R. M. Bozinovic and S. N. Srihari.; Off-Line Cursive Script Word Recognition . IEEE Transactions on Pattern Analysis and Machine \nIntelligence, vol. 2, pp. 68-83, 1989. \n[13] Sameh M. Awaida and Sabri A. Mahmound; Satate of the art in off-line writer identification of handwritten text and survey of writer identification of Arabic text. Educational Research an Reviews, Vol \n7(20), pp. 445-463, July, 2012. \n[14] B. Gatos, N. Papamarkos and C. Chamzas, \u201cSkew detection and text \nline position determinaction in digitized documents\u201d, Pattern \nRecognition Letter, vol. 30, pp. 1505-1519, 1997. \n[15] Onder Kirli, M. Bilginer, \u201c Automatic writer identification from text \nline images \u201d, Springer - Verlag,  2011.",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/2 - Using calligraphies features for off line writer identification.pdf"
+  },
+  {
+    "id": "b19b6144493be88c993b5de826ce7d8418e59117",
+    "title": "Feature Selection for Forensic Handwriting Identification",
+    "pages": 5,
+    "most_common": [
+      [
+        "featur",
+        106
+      ],
+      [
+        "f",
+        68
+      ],
+      [
+        "select",
+        29
+      ],
+      [
+        "result",
+        29
+      ],
+      [
+        "set",
+        26
+      ],
+      [
+        "use",
+        24
+      ],
+      [
+        "identif",
+        21
+      ],
+      [
+        "number",
+        21
+      ],
+      [
+        "subset",
+        21
+      ],
+      [
+        "writer",
+        21
+      ],
+      [
+        "evalu",
+        18
+      ],
+      [
+        "forens",
+        17
+      ],
+      [
+        "handwrit",
+        17
+      ],
+      [
+        "criterion",
+        17
+      ],
+      [
+        "accuraci",
+        16
+      ],
+      [
+        "differ",
+        15
+      ],
+      [
+        "primit",
+        15
+      ],
+      [
+        "framework",
+        14
+      ],
+      [
+        "search",
+        14
+      ],
+      [
+        "process",
+        14
+      ]
+    ],
+    "objective": " \u2013 current paper describes the use of a feature selection technique to reduce the number of features while the goodness set is selected on a framework for forensic handwriting identification.",
+    "problem": "a set of features is normally introduced to represent the problem domain.",
+    "method": "a sequential forward search and an evaluation criterion based on dependency were used to obtain a goodness subset ( gs) to improve the identification rate.",
+    "references": "[1] M. Dash and H. Liu, \u201cFetaure selection for classification,\u201d \nIntelligent Data Analysis, pp. 131-156, 1997.  \n[2] G. H. John, R. Kohavi and K. Pfleger, \u201cIrrelevant features and \nthe subset selection problem,\u201d Proc. International Conference on \nMachine Learning, pp. 121-129, 1994. \n[3] R. Kohavi and D. Sommerfield, \u201cFeature subset selection using \nthe wrapper method: overfitting and dynamic search space \ntopology,\u201d Proc. International Conference on Knowledge \nDiscovery and Data Mining, Morgan Kaufmann, pp. 192-197, \n1995. \n925\n925[4] H. Liu and H. Motoda, Feature extraction, construction and \nselection, 2 rd ed. Boston: Kluwer Academic, 2001. \n[5] H. Liu and L. Yu, \u201cToward integrating feature selection \nalgorithms for classification and clustering,\u201d IEEE Transaction \non Knowledge and Data Engineering, vol. 17, n. 4, pp. 491-502, \n2005. \n[6] R. N. Morris, Forensic handwriting identification: fundamental \nconcepts and principles. Academic Press, 2000. \n[7] R. Fernandez-de-Sevilla, F. Alonso-Fernandez, J. Fierrez and J. \nOrtega-Garcia, \"Forensic writer identification using allographic \nfeatures,\u201d Proc. International Conference on Frontiers in \nHandwriting Recognition, pp.308-313, 2010. \n[8] R. Plamondon and G. Lorrete, \"Automatic signature verification \nand writer identification: the state of the art,\u201d Pattern \nRecognition, vol. 37, n.2, pp. 107-131, 1989. \n[9] A. Bensefia, T. Paquet and L. Heutte, \"A writer identification \nand verification system,\" Pattern Recognition Letters, vol.26, \nn.13, pp.2080-2092, 2005. \n[10] V. Blankers, R. Nielsand L. Vuurpijl, \"Writer identification by \nmeans of explainable features: shapes of loops and lead-in \nstrokes,\" Proc. Belgian-Dutch Conference on Artificial \nIntelligence, pp.17-24, 2007.  \n[11] E. C. H. Luna, E. M. F. Riveron and S. G. Calderon, \"A \nsupervisoned algorihm with a new differentiated-weighting \nscheme for identifying the author of a handwritten text,\" Pattern \nRecognition Letters, vol.32, pp. 1139-1144, 2011. \n[12]  L. Schomaker, K. Franke and M. Bulacu, \u201cUsing codebooks of \nfragmented connected-component contours in forensic and \nhistoric writer identification,\u201d Pattern Recognition Letters, vol. \n28, pp.719\u2013727, 2007. \n[13] A. M. M. M. Amaral, C. O. A. Freitas and F. Bortolozzi, \u201cThe \ngraphometry applied to writer identification,\u201d Proc. \nInternational Conference on Image Processing, Computer \nVision, and Pattern Recognition,  Las Vegas, USA, vol.1, \npp.10-16, 2012. \n[14]  M. Sreejaj and S. M. Idicula, \"A survey on writer identification \nschemas,\" International Journal of Computer Applications, vol. \n26, n. 2, pp.23-33, 2011. \n[15] C. Freitas,  L. S. Oliveira, F. Bortolozzi and  R. Sabourin, \n\u201cBrazilian forensic letter database,\u201d Proc. International \nWorkshop on Frontiers on Handwriting Recognition, pp. 64-69, \n2008. \n[16] R. Kohavi and G. H, Jhon, \u201cWrappers for feature subset \nselection,\u201d Artificial Intelligence, vol. 97, n. 1-2, pp. 273-324, \n1997. \n[17] H. Liu and H. Motoda. Feature selection for knowledge \ndiscovery and data mining, Boston: Klwer Academic, 1998.  \n[18] J. G. Dy and C. E. Broadley, \u201cFeature subset selection and order \nidentification for unsupervised learning,\u201d Proc. International \nConference on Machine Learning, pp. 247-254, 2000. \n[19] H. Almuallim and T.G. Dietterich, \u201cLearning boolean concepts \nin the presence of many irrelevant features,\u201d Artificial \nIntelligence, vol. 69, n. 1-2, pp. 279-305, 1994. \n[20] M. Ben-Bassat, \u201cPattern recognition and reduction of \ndimensionality,\u201d Handbook of Statistics-II, P.R. Krishnaiah \nand L.N. Kanal, eds., pp. 773-791, North Holland, 1982. \n[21] M. A. Hall, Correlation-based feature subset selection for \nmachine learning, Hamilton New Zealand, 1998. \n[22] A. M. M. M. Amaral, C. O. A. Freitas, F. Bortolozzi. \u201cMultiple \ngraphometric features for writer identification as part of \nforensic handwriting analysis,\u201d Proc. International Conference \non Image Processing, Computer Vision, and Pattern \nRecognition. July, 2013, Las Vegas, USA, in press. [23] E. Zois and V. Anastassopoulos, \u201cMorphological waveform \ncoding for writer identification,\u201d Pattern Recognition, vol. 33, \nn.3, pp. 385-398, 2000. \n[24]  C. Hertel and H. Bunke, \u201cA set of novel features for writer \nidentification,\u201d Proc. International Conference on Audio and \nvideo-based biometric person authentication, pp. 679-687, 2003. \n[25]  A. Schlapbach and H. Bunke, \u201cOff-line handwriting \nidentification using HMM based recognizers,\u201d Proc. \nInternational Conference on Pattern Recognition, vol.2, 2004. \n[26] V. Pervouchine and G. Leedham, \"Extraction and analysis of \nforensic document examiner features used for writer \nidentification,\" Pattern Recognition, vol.40, pp.1004-1013, \n2007. \n[27]  J. Chen, D. Lopresti and E. Kavallieratou, \u201cThe impact of \nruling lines on writer identification,\u201d Proc. International \nConference on Frontiers in Handwriting Recognition, 2010.",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/3 - Feature Selection for Forensic Handwriting Identification.pdf"
+  },
+  {
+    "id": "98992099fa6d12626a45bf2b310b54f76ec692e3",
+    "title": "Ensemble of Classifiers for Offline Signature Verification",
+    "pages": 6,
+    "most_common": [
+      [
+        "signatur",
+        58
+      ],
+      [
+        "set",
+        48
+      ],
+      [
+        "featur",
+        43
+      ],
+      [
+        "classi\ufb01",
+        42
+      ],
+      [
+        "use",
+        40
+      ],
+      [
+        "ensembl",
+        29
+      ],
+      [
+        "error",
+        27
+      ],
+      [
+        "forgeri",
+        27
+      ],
+      [
+        "veri\ufb01c",
+        24
+      ],
+      [
+        "writer",
+        21
+      ],
+      [
+        "extract",
+        20
+      ],
+      [
+        "approach",
+        20
+      ],
+      [
+        "function",
+        19
+      ],
+      [
+        "system",
+        19
+      ],
+      [
+        "comput",
+        18
+      ],
+      [
+        "genuin",
+        18
+      ],
+      [
+        "size",
+        18
+      ],
+      [
+        "refer",
+        17
+      ],
+      [
+        "type",
+        17
+      ],
+      [
+        "sampl",
+        17
+      ]
+    ],
+    "objective": " \u2014in this work we address two important issues ofoff-line signature veri\ufb01cation.",
+    "problem": " \u2014in this work we address two important issues ofoff-line signature veri\ufb01cation.",
+    "method": "thesecond important aspect is the use of an ensemble of classi\ufb01ersbased on graphometric features to improve the reliability of theclassi\ufb01cation, hence reducing the false acceptance.",
+    "references": "",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/4 - Ensemble of Classifiers for Offline Signature Verification.pdf"
+  },
+  {
+    "id": "c83ef220befb0de7730712b0372e0167df847bc5",
+    "title": "Forensic Validation of Biometrics using Dynamic Handwritten Signatures",
+    "pages": 9,
+    "most_common": [
+      [
+        "signatur",
+        145
+      ],
+      [
+        "examin",
+        50
+      ],
+      [
+        "\uf0b7",
+        50
+      ],
+      [
+        "use",
+        48
+      ],
+      [
+        "applic",
+        41
+      ],
+      [
+        "inform",
+        38
+      ],
+      [
+        "fig",
+        36
+      ],
+      [
+        "signal",
+        32
+      ],
+      [
+        "byte",
+        32
+      ],
+      [
+        "captur",
+        31
+      ],
+      [
+        "forens",
+        28
+      ],
+      [
+        "devic",
+        28
+      ],
+      [
+        "ieee",
+        25
+      ],
+      [
+        "access",
+        24
+      ],
+      [
+        "measur",
+        24
+      ],
+      [
+        "sign",
+        22
+      ],
+      [
+        "point",
+        22
+      ],
+      [
+        "indic",
+        22
+      ],
+      [
+        "player",
+        22
+      ],
+      [
+        "\uf0a7",
+        21
+      ]
+    ],
+    "objective": "this paper explains th is need using the design and development of a desktop application as the guiding thread .",
+    "problem": "the incorporation of new technologies into the process of signing documents has created new challenges for this task.",
+    "method": "translations and content mining are permitted for academic research only.",
+    "references": "[1] R. Brunelle, \u201cQuestioned document examination,\u201d Bureau of \nAlcohol, Tobacco, and Firearms, US  \u2026 , 1982. [Online]. Available: \nhttps://scholar.google.com.ph/scholar?q=question+document+exami\nnation&btnG=&hl=en&as_sdt=0%2C5#4. [Accessed: 12-Aug-\n2017]. \n[2] Wikip edia, \u201cGraphonomics.\u201d [Online]. Available: \nhttps://en.wikipedia.org/wiki/Graphonomics. [Accessed: 12-Aug-\n2017]. \n[3] Wacom, \u201cSTU -500.\u201d [Online]. Available: \nhttp://www.wacom.com/en-cl/enterprise/business-\nsolutions/hardware/signature-pads/stu-500. [Accessed: 12-Aug-\n2017]. \n[4] R. Plamondon and S. N. Srihari, \u201cOn -line and off-line handwriting \nrecognition: A comprehensive survey,\u201d IEEE Trans. Pattern Anal. \nMach. Intell. , vol. 22, no. 1, pp. 63 \u201384, 2000. \n[5] A. Parziale et al. , \u201cAn Interactive Tool for Forensic Ha ndwriting \nExamination,\u201d in 2014 14th International Conference on Frontiers \nin Handwriting Recognition , 2014, pp. 440 \u2013445. \n[6] L. Guarnera et al. , \u201cGRAPHJ: A Forensics Tool for Handwriting \nAnalysis,\u201d Springer, Cham, 2017, pp. 591\u2013 601. \n[7] R. Blanco-Gonzalo, O. Miguel-Hurtado, R. Sanchez-Reillo, and A. \nGonzalez- Ramirez, \u201cUsability analysis of a handwritten signature \nrecognition system applied to mobile scenarios,\u201d in Proceedings - \nInternational Carnahan Conference on Security Technology , 2014, \npp. 1 \u20136. \n[8] R. Blanco-Gonzalo, R. Sanchez-Reillo, O. Miguel-Hurtado, J. Liu-\nJimenez, R. Blanco-Gonzalo, and O. Miguel- Hurtado, \u201cPerformance \nevaluation of handwritten signature recognition in mobile \nenvironments,\u201d IET Biometrics , vol. 3, no. 3, pp. 139 \u2013146, 2014. \n[9] ISO /IEC JTC1, \u201cISO/IEC 19794 -7:2014 Information technology - \nBiometric data interchange formats - Part 7: Signature/sign time \nseries data.,\u201d 2014.  \n[10] Wacom, \u201cSignature SDK - Signature Scope - Developer \nDocumentation - WILL Documentation.\u201d [Online]. Availabl e: \nhttps://developer-\ndocs.wacom.com/display/DevDocs/Signature+SDK+-\n+Signature+Scope. [Accessed: 10-Jan-2018]. \n[11] NeuroScript, \u201cScriptAlyzeR - Handwriting Analysis Software \nSystem.\u201d [Online]. Available: \nhttp://www.neuroscript.net/scriptalyzer.php. [Accessed: 10-Jan-\n2018]. \n \n \nRaul Sanchez-Reillo  (M\u201997) Prof. Raul \nSanchez-Reillo obtained his PhD in \nTelecommunications Engineering in 2000 \nfrom Universidad Politecnica de Madrid. \nHe is now an Associate Professor at Carlos \nIII University of Madrid (UC3M). He also \nheads the University Group for \nIdentification Technologies (GUTI). His \nR&D group is involved in project \ndevelopment related to identification technologies, either by the \nuser of secure elements (such as smartcards) and/or by using \nBiometrics. In addition to R&D activities, he has also managed \nprojects in a broad range of applications, from Social Security \nServices to Financial Payment Methods. He has participated in \nEuropean Projects such as eEpoch, BioSec, BEST Network, \nEKSISTENZ, MobilePass and ORIGINS, primarily as a WP \nleader. He is a member of the SC17, SC27 and SC37 \nStandardization Committees. He holds the Spanish Chair in \nSC17 and the Spanish Secretariat in SC37, along with the \nSecretariat of international working groups SC17 WG11 and \nSC37 WG2. In 2009, he founded IDTestingLab, which is an \nevaluation laboratory for identification products. He is a \nmember of several ad hoc groups, such as the Biometric \nVulnerability Assessment Expert Group (BVAEG). \n2169-3536 (c) 2018 IEEE. Translations and content mining are permitted for academic research only. Personal use is also permitted, but republication/redistribution requires IEEE permission. See\nhttp://www.ieee.org/publications_standards/publications/rights/index.html for more information.This article has been accepted for publication in a future issue of this journal, but has not been fully edited. Content may change prior to final publication. Citation information: DOI 10.1109/ACCESS.2018.2849503, IEEE Access\nAccess- 2018 -06492  \n 9 \n \nJudith Liu-Jimenez obtained her degree in \nTelecommunications Engineering in 2004 \nat Polytechnic University of Madrid. She \nhas been working since 2004 at the \nUniversity Carlos III of Madrid, where she \nobtained her PhD in Electronics in 2010. \nHer work has focused on Biometrics and \nhardware/software co-design, specifically \nIris Biometrics. She has participated in several national and \nEuropean-funded projects on ID management, evaluation and \nanti-spoofing mechanisms. \n \n Ramon Blanco-Gonzalo completed his \nInteruniversity Master \u2019s degree  in \nTelematic Engineering in 2011. His \nMaster \u2019s thesis was related to smart \nenvironments and biometrics. In February \n2016 , he completed his PhD, which \nfocused on analysing and improving \nusability in biometric systems. He now \nworks at the University Group of \nIdentification Technologies (GUTI) as a post- doctoral \nresearcher. He has been a member of the Spanish \nStandardization Subcommittee UNE/ CTN71/SC37 \"Biometric \nIdentification\" since 2013. Furthermore, he is part of the \nISO/IEC JTC1/SC37 \"Biometric Identification\", as his work is \nactive in WG3 \"Biometric Data Interchange Formats\" and in \nWG5 \"Biometrics Evaluation\".",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/5 - Forensic Validation of Biometrics Using Dynamic Handwritten Signatures.pdf"
+  },
+  {
+    "id": "9995e576aa7ae92b142caf8cc16dbdf55ff6e23f",
+    "title": "Quantitative Evaluation of Features for Forensic Handwriting Examination",
+    "pages": 6,
+    "most_common": [
+      [
+        "g",
+        113
+      ],
+      [
+        "v",
+        64
+      ],
+      [
+        "featur",
+        61
+      ],
+      [
+        "document",
+        49
+      ],
+      [
+        "subject",
+        41
+      ],
+      [
+        "valu",
+        33
+      ],
+      [
+        "measur",
+        26
+      ],
+      [
+        "diverg",
+        23
+      ],
+      [
+        "stroke",
+        21
+      ],
+      [
+        "tabl",
+        21
+      ],
+      [
+        "handwrit",
+        20
+      ],
+      [
+        "produc",
+        20
+      ],
+      [
+        "use",
+        17
+      ],
+      [
+        "differ",
+        17
+      ],
+      [
+        "space",
+        15
+      ],
+      [
+        "comput",
+        15
+      ],
+      [
+        "one",
+        14
+      ],
+      [
+        "set",
+        13
+      ],
+      [
+        "word",
+        13
+      ],
+      [
+        "data",
+        13
+      ]
+    ],
+    "objective": "not found",
+    "problem": "i. introduction one of the main obstacles for the adoption of automatic tools in forensic handwriting examination lies in the difference between the way the human expert and the machine look at the problem.",
+    "method": "afha workshop @ 2015 13th international conference on document analysis and recognition (icdar) quantitative evaluation of features for forensic handwriting examination angelo marcelli, antonio parziale and claudio de stefano abstract- we propose a quantitative app roach to both feature evaluation and comparison that combines forensic handwriting examination best practices with pattern recognition methodologies.",
+    "references": "[1] R. A. Huber and A. M. Headrick, \"Handwriting Identification: Facts and \nFundamentals\", CRC Press, 1999 \n[2] Ron N. Morris, \"Forensic Handwriting Identification\", Academic Press, \n2000 \n[3] R. Plamondon and S. N. Srihari, \"On-line and off-line handwriting \nrecognition: a comprehensive survey,\" IEEE Trans. Pattern Analysis and \nMachine Intelligence, vol. 22, no. I, pp. 63-84, 2000. \n[4] D. Impedovo and G. Pirlo, \"Automatic signature verification: The state \nof the art,\" IEEE Transactions on Systems, Man, and Cybernetics, Part \nC, vol. 38, no. 5, pp. 609-635, Sep. 2008. \n[5] G. Louloudis; B. Gatos.; N. Stamatopoulos; A. Papandreou., \"ICDAR \n2013 Competition on Writer Identification,\" Proc. ICDAR 2013, August \n2013, pp.1397-1401. \n[6] F. Slimane; S. Awaida; A. Mezghani; M.T. Parvez; S. Kanoun; S.A. \nMahmoud; V. Margner, \"ICFHR2014 Competition on Arabic Writer \nIdentification Using AHTID/MW and KHATT Databases,\" Proc. \nICFHR 2014, September 2014, pp.797-802. down-ratio curvature \n0,008 0,009 \n12,280 0,007 intra-fragment \nSpacing \n1,240 \n0,009 inter-fragment \nSpacing \n1,240 \n0,410 \n[7] M.l. Malik; M. Liwicki; L. Alewijnse; W.Ohyama; M.Blumenstein; B. \nFound, \"ICDAR 2013 Competitions on Signature Verification and \nWriter Identification for On-and Offline Skilled Forgeries (SigWiComp \n2013),\" Proc.lCDAR 2013, August 2013, pp.1477-1483. \n[8] A. Parziale, A. Santoro, A. Marcelli et aI., \"An Interactive Tool for \nForensic Handwriting Examination,\" Proc. ICFHR 2014, pp.440-445, \nSeptember 2014 \n[9] V. Papavassiliou, T. Stafylakis, V. Katsouros and G. Carayannis, \n\"Handwritten document image segmentation into text lines and word,\" \nPattern Recognition, vol. 43, Jan. 2010, pp. 369-377. \n[10] A. Parziale, C. De Stefano and A. Marcelli, \"Segmenting Isolated \nCharacters within Cursive Words,\" Proc. IGS 2011, June 2011, pp. 156-\n159. \n[II] L.P. Cordelia, C. De Stefano, A. Marcelli and A. Santoro, \"Writing \nOrder Recovery from Off-Line Handwriting by Graph Traversal,\" Proc. \nlCPR 2010, August 20 I 0, pp. 1896-1900. \n[12] C. De Stefano, G. Guadagno and A. Marcelli, \"A saliency-based \nsegmentation method for on-line cursive handwriting,\" Int. J. Patt. \nRecogn. Artif. Intell., vol. 18, November 2004, pp. 1139-1156 \n[13] R. Senatore and A. Marcelli, \"Where are the Characters? Characters \nSegmentation in Annotated Cursive Handwriting\", Proc. IGS 2013, June \n2013, pp. 171-174. \n[14] Kullback, S.; Leibler, R. A. On Information and Sufficiency. Ann. Math. \nStatist. 22 (1951), no. 1, 79-86. doi: JO.1214/aoms/1l77729694. \n[I5] Masquerade, Natural Intelligent Tecnologies S.r.i., www.nitesrl.com \n[16] M Diaz-Cabrera, MA Ferrer, A Morales (2015) Modeling the Lexical \nMorphology of Western Handwritten Signatures. PLoS ONE 10(4): \ne0123254.",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/6 - Quantitative Evaluation of Features for Forensic Handwriting Examination.pdf"
+  },
+  {
+    "id": "45adfe446b153207b3342316458202f8ec863645",
+    "title": "Handedness Detection of Online Handwriting based on Horizontal Strokes",
+    "pages": 6,
+    "most_common": [
+      [
+        "stroke",
+        74
+      ],
+      [
+        "sampl",
+        48
+      ],
+      [
+        "horizont",
+        45
+      ],
+      [
+        "handwrit",
+        29
+      ],
+      [
+        "detect",
+        20
+      ],
+      [
+        "\ufffd",
+        19
+      ],
+      [
+        "method",
+        18
+      ],
+      [
+        "lefthand",
+        18
+      ],
+      [
+        "handed",
+        16
+      ],
+      [
+        "point",
+        15
+      ],
+      [
+        "base",
+        14
+      ],
+      [
+        "onlin",
+        13
+      ],
+      [
+        "writer",
+        13
+      ],
+      [
+        "use",
+        13
+      ],
+      [
+        "righthand",
+        13
+      ],
+      [
+        "line",
+        13
+      ],
+      [
+        "number",
+        13
+      ],
+      [
+        "write",
+        12
+      ],
+      [
+        "classifi",
+        12
+      ],
+      [
+        "result",
+        12
+      ]
+    ],
+    "objective": "this paper describes an automatized method based on approach of fhes.",
+    "problem": "not found",
+    "method": "afha workshop @ 2015 13th international conference on document analysis and recognition (icdar) handedness detection of online handwriting based on horizontal strokes erika griechisch department of medical physics and informatics university of szeged, hungary email: griechisch.erika@gmail.com abstract-forensic handwriting experts (fhes) have to expand their work field and elaborate supplementary methods because of spreading of online signatures.",
+    "references": "[1] K Bandi and Sargur N Srihari. Writer demographic \nclassification using bagging and boosting. In Proc. 12th \nInt. Graphonomics Society Conference, pages 133-137, \n2005. \n[2] Marianne Conrad. Left-hand writing vs. right-hand \nwriting. lournal of the American Society of Questioned \nDocument Examiners, 11(1):19-27, 2011. Presented at \nENFHEX Conference Modern Developments in Hand\u00ad\nwriting Examination, Vilnius, September 20-22, 2007. \n[3] Ordway Hilton. Scientific examination of questioned \ndocuments. CRC press, 1982. \n[4] Roy A Huber and Alfred M Headrick. Handwriting \nidentification: facts and fundamentals. CRC Press, 2010. \n[5] Marcus Liwicki and Horst Bunke. lam-ondb-an on\u00ad\nline english sentence database acquired from handwrit\u00ad\nten text on a whiteboard. In Document Analysis and \nRecognition, 2005. Proceedings. Eighth International \nConference on, pages 956-961. IEEE, 2005. \n[6] Marcus Liwicki, Andreas Schlapbach, Peter Loretan, \nand Horst Bunke. Automatic detection of gender and \nhandedness from on-line handwriting. In Proc. 13th \nCon! of the Graphonomics Society, pages 179-183, \n2007. \n[7] V Saran, S Kumar, AK Gupta, and S Ahmad. Differenti\u00ad\nation of handedness of writer based on their strokes and \ncharacteristic features. 1 Forensic Res, 4(204):2, 2013. \n[8] Catalin I Tomai, Devika M Kshirsagar, and Sargur N \nSrihari. Group discriminatory power of handwritten \ncharacters. In Electronic Imaging 2004, pages 116-123. \nInternational Society for Optics and Photonics, 2003.",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/7 - Handedness Detection of Online Handwriting based on Horizontal Strokes.pdf"
+  },
+  {
+    "id": "3a27a3a87f5311823b59f306d706ee4b0003ab00",
+    "title": "Handwriting Forgery Detection Based on Ink Colour Features",
+    "pages": 4,
+    "most_common": [
+      [
+        "detect",
+        46
+      ],
+      [
+        "document",
+        28
+      ],
+      [
+        "tamper",
+        28
+      ],
+      [
+        "use",
+        27
+      ],
+      [
+        "point",
+        27
+      ],
+      [
+        "method",
+        25
+      ],
+      [
+        "ink",
+        23
+      ],
+      [
+        "featur",
+        22
+      ],
+      [
+        "object",
+        22
+      ],
+      [
+        "outlier",
+        17
+      ],
+      [
+        "propos",
+        14
+      ],
+      [
+        "imag",
+        14
+      ],
+      [
+        "base",
+        11
+      ],
+      [
+        "extract",
+        11
+      ],
+      [
+        "b",
+        11
+      ],
+      [
+        "handwrit",
+        10
+      ],
+      [
+        "forgeri",
+        10
+      ],
+      [
+        "type",
+        10
+      ],
+      [
+        "test",
+        10
+      ],
+      [
+        "anomali",
+        10
+      ]
+    ],
+    "objective": "in this paper, a novel method is proposed to detect the forgery in a text by detecting different ink using image processing instead of conventional methods.",
+    "problem": "not found",
+    "method": "handwriting forgery detection based on ink colour features  amr megahed, sondos m. fadl  school of computer science and technology, harbin institute of technology harbin 150080, china    amrmegahed.cs@gmail.com, sondos.magdy@ci.menofia.edu.eg qi han, and qiong li school of computer science and technology, harbin institute of technology harbin 150080, china    {qi.han, qiongli}@hit.edu.cn   abstract \u2014document forgery detection is a vitally important field because the forensic role is used in many types of crimes.",
+    "references": "[1] R. A. Huber, and A. M. Headrick. Handwriting identification: facts and \nfundamentals. CRC press, 1999 .  \n[2] R. R. Bradford, and R. Bradford. Introduction to handwriting examination and identification. Nelson-Hall Publishers, 1992 . \n[3] R. Brunelle. Questioned Document Examination in Forensic Science Handbook, Prentice Hall, 1982 . \n[4] David Ellen. The scientific examination of documents. Taylor and \nFrancis, 2nd Edition, 1997 . \n[5] Ordway, Hilton. Scientific examination of questioned documents. CRC \nPress, 1993 . [6] U.V. Marti, R. Messerli, and H. Bunke. Writer identification using text \nline based features. in Proceedings: Document Analysis and \nRecognition, Sixth International Conference, pp. 101-105, 2001 . \n[7] M. Bulacu and L. Schomaker. Text-independent writer identification and verification using textural and allographic features. IEEE \ntransactions on pattern analysis and machine intelligence, vol. 29, pp. \n701-717, 2007 . \n[8] L. Schomaker and M. Bulacu. Automatic writer identification using \nconnected-component contours and edge-based features of uppercase western script. IEEE Transactions on Pattern Analysis and Machine \nIntelligence, vol. 26, pp. 787-798, 2004 . \n[9] A. Bensefia, T. Paquet, and L. Heutte. A writer identification and verification system. Pattern Recognition Letters, vol. 26, pp. 2080-2092, \n2005 . \n[10] S.H. Cha and C. C. Tappert. Automatic detection of handwriting forgery. Frontiers in Handwriting Recognition Proceedings. Eighth \nInternational Workshop, pp. 264-267, 2002 . \n[11] R. K. Nigama, and P. Mishraa. Forensic examination of obliteration and \nalteration in handwriting using digital image processing. journal of \nforensic science, vol. 2(1), pp. 64- 66, 2011 . \n[12] C. Bhagvati and D. Haritha. Classification of liquid and viscous inks using HSV colour space. in Document Analysis and Recognition, 2005. \nProceedings. Eighth International Conference, pp. 660-664, 2005 .  \n[13] H. Dasari and C. Bhagvati. Identification of non-black inks using hsv colour space. in Document Analysis and Recognition, 2007. ICDAR \n2007. Ninth International Conference on, 2007, pp. 486-490 . \n[14] N. Otsu. A Threshold Selection Method from Gray-Level Histograms. IEEE Transactions on Systems, Man, and Cybernetics, Vol. 9, No. 1, pp. \n62-66, 1979 . \n[15] H. Samet, M. Tamminen. Efficient Component Labeling of Images of \nArbitrary Dimension Represented by Linear Bintrees. IEEE \nTransactions on Pattern Analysis and Machine Intelligence. IEEE. 10 \n(4): 579, 1988 . \n[16] Y\n. Liu and T. Huang. Exposing video inter-frame forgery by Zernike \nopponent chromaticity moments and coarseness analysis. Multimedia \nSystems, vol. 23, pp. 223-238, 2017 . \n[17] D. Ghosh and A. Vogt. Outliers: An evaluation of methodologies.  in \nJoint Statistical Meetings, 2012, pp. 3455-3460.",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/8 - Handwriting Forgery Detection Based on Ink Colour Features.pdf"
+  },
+  {
+    "id": "9b4c837787d870b5d065ff408baeeb1c4f850c74",
+    "title": "Writer Verification in Forensic Handwriting Examination: A Pilot Study",
+    "pages": 6,
+    "most_common": [
+      [
+        "featur",
+        55
+      ],
+      [
+        "document",
+        42
+      ],
+      [
+        "genuin",
+        31
+      ],
+      [
+        "k",
+        26
+      ],
+      [
+        "handwrit",
+        21
+      ],
+      [
+        "distinct",
+        21
+      ],
+      [
+        "valu",
+        19
+      ],
+      [
+        "writer",
+        17
+      ],
+      [
+        "question",
+        17
+      ],
+      [
+        "stroke",
+        17
+      ],
+      [
+        "f",
+        17
+      ],
+      [
+        "subject",
+        16
+      ],
+      [
+        "gc",
+        16
+      ],
+      [
+        "variabl",
+        14
+      ],
+      [
+        "provid",
+        13
+      ],
+      [
+        "decis",
+        13
+      ],
+      [
+        "gd",
+        13
+      ],
+      [
+        "q",
+        12
+      ],
+      [
+        "show",
+        11
+      ],
+      [
+        "mean",
+        11
+      ]
+    ],
+    "objective": "in this study we investigate to which extent a statistical characterization of the variability exhibited by a set of features commonly adopted by forensic handwriting examiners may provide valuable clue to weight the evidence drawn from the available data.",
+    "problem": "not found",
+    "method": "eventually, we map in terms of the mean and standa rd error a decision criterion based on the feature similarity.",
+    "references": "[1] /g1G. Louloudis, B. Gatos. N. St amatopoulos, A. Papandreou., \"ICDAR \n2013 Competition on Writer Identification,\" Proc. ICDAR 2013, \nAugust 2013, pp.1397-1401. \n[2] /g1M.I. Malik; M. Liwicki; L. Alew ijnse; W.Ohyama; M.Blumenstein; \nB. Found, \"ICDAR 2013 Competitions on Signature Verification and \nWriter Identification for On- and Offline Skilled Forgeries \n(SigWiComp 2013),\" Proc. ICDAR 2013, August 2013, pp.1477-\n1483. \n[3] /g1M.I. Malik, S. Ahmed, A. Marcelli, U. Pal, M. Blumstein, L. \nAlewijnse, M. Liwicki, \u201cICDAR2015 Competition on Signature \nVerification and Writer Identification for On- and Off-line Skilled \nForgeries (SigWiComp 2013), Proc. ICDAR 2015, August 2015, pp. \n1189-1190. \n[4] /g1R. A. Huber and A. M. Headrick, \u201cHandwriting Identification: Facts \nand Fundamentals\u201d, CRC Press, 1999 \n[5] /g1Ron N. Morris, \u201cForensic Handwriting Identification\u201d, Academic \nPress, 2000  \n[6] /g1A. Marcelli, A. Parziale, C. De Stefano, Quantitative Evaluation of \nFeatures for Forensic Handwriting Examination, Proc. AFHA 2015, \nAugust 2015, pp.1-6. \n[7] /g1A. Parziale, A. Santoro, A. Marcelli et al., \u201cAn Interactive Tool for \nForensic Handwriting Examination,\u201d Proc. ICFHR 2014, pp.440-445, \nSeptember 2014 \n[8] /g1Masquerade, Natural Intelligent Tecnologies S.r.l., www.nitesrl.com \n \n \n \n \n \n \n \n(a)                                                                                        (b) \nFigure 2. /g1Percentage of distinctive features voting for Writer 1 as the author of: (a) Q 1 and (b) Q 2. Note that according to the decision criterion it is likely \nthat Writer 1 is the author of Q 1 for k \u2265 4. Instead, it is likely that Writer 1 is not the author of Q 2 for any value of k. \n449\n450(a)                                                                                        (b) \nFigure 3. /g1 Percentage of distinctive features voting for Writer 2 as the author of: (a) Q 1 and (b) Q 2. Note that according to the decision criterion it is likely \nthat Writer 2 is the author of Q 1 for k \u2265 4 and of Q 2 for k \u2265 3. \n(a)                                                                                        (b) \nFigure 4. /g1 Percentage of distinctive features voting for Writer 3 as the author of: (a) Q 1 and (b) Q 2. Note that according to the decision criterion it is likely \nthat Writer 3 is the author of Q 1 for k \u2265 4. Instead, it is likely that Writer 3 is not the author of Q 2 for any value of k. \n450\n451(a)                                                                                        (b) \nFigure 5. /g1Percentage of distinctive features voting for Writer 4 as the author of: (a) Q 1 and (b) Q 2. Note that according to the decision criterion it is likely \nthat Writer 4 is the author of Q 1 for k \u2265 4. Instead, it is likely that Writer 4 is the author of Q 2 for k = 5. \nTABLE II. C OMPARISON BETWEEN GCAND GDWRITTEN BY WRITER 1\n Gc G d G c vs G d G d vs G c \n\u03bcc \u03c3*\nc \u03bcd \u03c3*\nd \u03c3*\nc 2\u03c3*\nc 3\u03c3*\nc 4\u03c3*\nc 5\u03c3*\nc \u03c3*\nd 2\u03c3*\nd 3\u03c3*\nd 4\u03c3*\nd 5\u03c3*\nd \nF1 0.20 0.01 0.22 0.01 0 1 1 1 1 0 1 1 1 1\nF2 2.49 0,15 2.18 0.12 0 1 1 1 1 0 0 1 1 1\nF3 3.23 0,36 2.51 0.21 0 1 1 1 1 0 0 0 1 1\nF4107.48 4.57 106.37 5.88 1 1 1 1 1 1 1 1 1 1\nF5-50.98 2.17 -55.88 2.87 0 0 1 1 1 0 1 1 1 1\nF6110.51 5.28 104.03 4.60 0 1 1 1 1 0 1 1 1 1\nF7-41.05 3.13 -57.07 4.54 0 0 0 0 0 0 0 0 1 1\nF8120.68 6.52 120.04 7.56 1 1 1 1 1 1 1 1 1 1\nF9123.02 3.26 113.43 3.95 0 0 1 1 1 0 0 1 1 1\nF10-48.51 4.37 -63.18 6.00 0 0 0 1 1 0 0 1 1 1\nF11 49.33 3.75 51.02 5.19 1 1 1 1 1 1 1 1 1 1\nsum 3 7 9 10 10 3 6 9 11 11\nTABLE III. /g1 COMPARISON BETWEEN THE QUESTIONED DOCUMENT AND BOTH THE GENUINE DOCUMENTS WRITTEN BY WRITER 1. NOTE THAT \nFEATURE F8 HAS NOT BEEN DETECTED IN Q1, WHILE ONLY ONE MEASUREMENT IS AVAILABLE FOR F10 AND F11.  \n Q1 G c vs Q 1  Gd vs Q 1 \n\u03bcQ1 \u03c3*\nQ1 \u03c3*\nc 2\u03c3*\nc 3\u03c3*\nc 4\u03c3*\nc 5\u03c3*\nc \u03c3*\nd 2\u03c3*\nd 3\u03c3*\nd 4\u03c3*\nd 5\u03c3*\nd \nF1 0.24 0.03 0 0 0 1 1 0 1 1 1 1 \nF2 3.20 0.75 0 0 0 0 1 0 0 0 0 0 \nF3 2.20 0.32 0 0 1 1 1 0 1 1 1 1 \nF4 113.08 12.25 0 1 1 1 1 0 1 1 1 1 \nF5 -45.83 6.85 0 0 1 1 1 0 0 0 1 1 \nF6 105.56 15.15 1 1 1 1 1 1 1 1 1 1 \nF7 -45.41 9.37 0 1 1 1 1 0 0 1 1 1 \nF8 - - 0 0 0 0 0 0 0 0 0 0 \nF9 127.56 2.15 0 1 1 1 1 0 0 0 1 1 \nF10 -38.02 0.00 0 0 0 0 0 0 0 0 0 0 \nF11 16.89 0.",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/9 - Writer verification in forensic handwriting examination.pdf"
+  },
+  {
+    "id": "6afdc182ac529bd610eb787fcb97a4eed7f044bb",
+    "title": "Forensic handwriting examination and human factors Improving the practice through automation and expert training",
+    "pages": 6,
+    "most_common": [
+      [
+        "handwrit",
+        83
+      ],
+      [
+        "featur",
+        70
+      ],
+      [
+        "expert",
+        50
+      ],
+      [
+        "techniqu",
+        49
+      ],
+      [
+        "letter",
+        38
+      ],
+      [
+        "forens",
+        37
+      ],
+      [
+        "use",
+        37
+      ],
+      [
+        "examin",
+        36
+      ],
+      [
+        "handwritten",
+        36
+      ],
+      [
+        "p",
+        27
+      ],
+      [
+        "perform",
+        26
+      ],
+      [
+        "\u2014",
+        24
+      ],
+      [
+        "writer",
+        22
+      ],
+      [
+        "\u2013",
+        22
+      ],
+      [
+        "select",
+        22
+      ],
+      [
+        "text",
+        20
+      ],
+      [
+        "document",
+        20
+      ],
+      [
+        "number",
+        19
+      ],
+      [
+        "probabl",
+        19
+      ],
+      [
+        "russia",
+        18
+      ]
+    ],
+    "objective": "this will be a major topic of research in this paper.",
+    "problem": "these problems can be partly solved by using presented automated workplace of forensic handwriting expert \u201cfhwe v.1.0\u201d.",
+    "method": "first of all, it is the development of quantitative techniques for handwriting analysis, allowing ob taining scientifically grounded results of the study.",
+    "references": "",
+    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/10 - Forensic handwriting examination and human factors Improving the practice through automation and expert training.pdf"
+  }
+]
