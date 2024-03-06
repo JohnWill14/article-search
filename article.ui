@@ -69,8 +69,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1295</width>
-       <height>1313</height>
+       <width>1309</width>
+       <height>759</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -90,6 +90,11 @@
       </item>
       <item>
        <widget class="QTextEdit" name="textObjective">
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
         <property name="textInteractionFlags">
          <set>Qt::NoTextInteraction</set>
         </property>
@@ -114,6 +119,11 @@
         <property name="enabled">
          <bool>true</bool>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
         <property name="textInteractionFlags">
          <set>Qt::NoTextInteraction</set>
         </property>
@@ -135,6 +145,11 @@
       </item>
       <item>
        <widget class="QTextEdit" name="textProblem">
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
         <property name="textInteractionFlags">
          <set>Qt::NoTextInteraction</set>
         </property>
@@ -159,6 +174,11 @@
         <property name="enabled">
          <bool>true</bool>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
         <property name="textInteractionFlags">
          <set>Qt::NoTextInteraction</set>
         </property>
@@ -180,6 +200,11 @@
       </item>
       <item>
        <widget class="QTextEdit" name="textReference">
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
         <property name="textInteractionFlags">
          <set>Qt::NoTextInteraction</set>
         </property>
