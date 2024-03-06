@@ -19,7 +19,7 @@ from rank_bm25 import BM25Okapi
 import numpy
 
 from extractInfoUtil import extractReferences, extractObjective, extractProblem, \
-    extractMethodologyByTerms
+    extractMethodologyByTerms, extractContributes
 from fileUtil import readPdf
 
 
@@ -62,11 +62,11 @@ def extractFreq(tokens):
     return nltk.FreqDist(tokens)
 
 
-def article(title,numberPages, most_common, objective, problem, method, references, path):
+def article(title,numberPages, most_common, objective, problem, method, contributes, references, path):
     h = hashlib.shake_256(title.encode())
     id = h.hexdigest(20)
     return {"id": id, "title": title,"pages":numberPages, "most_common": most_common, "objective": objective, "problem": problem, "method": method,
-     "references": references, "path":path}
+     "references": references, "contributes":contributes, "path":path}
 
 def prepareTextFromPath(path):
     text = readPdf(path)
@@ -89,10 +89,10 @@ def perform(path):
 
     # info
     title, numberPages = extractInfoFromPdf(path)
-    print(title)
+
     # read
     text = readPdf(path)
-    references = extractReferences(text)  # import
+    references = extractReferences(text)
     text = text.replace(references, "")
 
     # token
@@ -101,35 +101,24 @@ def perform(path):
     # remove stop words
     words_really_importants = removeStopWords(tokens)
 
-    # lemmatize
-    lemma = lemmatize(words_really_importants)
-
-    # stemming
-    ws = stemming(lemma)
-
     # freq
-    freq = extractFreq(ws)
+    freq = extractFreq(words_really_importants)
 
-    most_common10 = freq.most_common(20)  # import
-
-    # bigrama
-    bigram_measures = nltk.collocations.BigramAssocMeasures()
-    finder_bigram = BigramCollocationFinder.from_words(ws)
-
-    # print(finder_bigram.nbest(bigram_measures.pmi, 10))
+    most_common10 = freq.most_common(20)
 
     # objective
-
     objective = extractObjective(text)
 
     # problem
-
     problem = extractProblem(text)
 
     # method
     method = extractMethodologyByTerms(text)
 
-    return article(title, numberPages, most_common10,objective,problem, method, references, path)
+    # contributes
+    contributes = extractContributes(text)
+
+    return article(title, numberPages, most_common10,objective,problem, method, contributes, references, path)
 
 def process_papers(listdir):
     nltk.download('stopwords')
@@ -153,7 +142,7 @@ def searchBm25(query, tokens):
 def extractInfoFromPdf(path):
     reader = PdfReader(path)
     title = reader.metadata.title
-    if(title==None or title=="untitled"):
+    if title==None or title== "untitled":
         title = clean_text(os.path.basename(path).replace(".pdf",""))
     sizePages = len(reader.pages)
     return title, sizePages

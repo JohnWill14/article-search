@@ -4,7 +4,7 @@ import nltk
 
 
 def extractReferences(text):
-    refrences = "".join(re.findall("(?s)REFERENCES(.*)", text)).strip()
+    refrences = "".join(re.findall("(?s)EFERENCES(.*)", text)).strip()
     index = refrences.rfind(".")
     return refrences[0:index + 1]
 
@@ -22,7 +22,7 @@ def extractIntro(text):
 
 
 def extractObjectiveByTerms(text):
-    word_keys =[
+    word_keys = [
         'this work',
         'paper describe',
         'This paper explain',
@@ -52,13 +52,15 @@ def extractObjective(text):
 
     if objective == "not found":
         intro = extractIntro(text)
-        return  extractObjectiveByTerms(intro).replace("abstract", "")
+        objective = extractObjectiveByTerms(intro).replace("abstract", "")
 
-    return objective
+    objective = re.sub(r'^[^a-zA-Z]+', '', objective)
+
+    return objective.capitalize()
 
 
-def extractProblemByTerms(text):
-    word_keys =[
+def extractProblemByTerms(tokens):
+    word_keys = [
         'this issue',
         'this problem',
         'issue',
@@ -72,27 +74,27 @@ def extractProblemByTerms(text):
         'Conundrum'
     ]
     word_keys = [w.lower() for w in word_keys]
-    sent_text = nltk.sent_tokenize(text.lower())
+    sent_text = nltk.sent_tokenize(tokens.lower())
+    sentences = []
     for sentence in sent_text:
         s = sentence.replace('\n', "")
         if any(substring in s for substring in word_keys):
-            return s
-    return "not found"
+            sentences.append(s.replace("abstract", "").capitalize())
+
+    if len(sentences) > 0:
+        return sentences
+    return ["not found"]
 
 
 def extractProblem(text):
-    abstract = extractAbstract(text)
-    problem = extractProblemByTerms(abstract).replace("abstract", "")
-
-    if problem == "not found":
-        intro = extractIntro(text)
-        return  extractProblemByTerms(intro).replace("abstract", "")
+    abstract_intro = extractAbstract(text) + "  " + extractIntro(text)
+    problem = extractProblemByTerms(abstract_intro)
 
     return problem
 
 
 def extractMethodologyByTerms(text):
-    word_keys =[
+    word_keys = [
         'Based on',
         'approach is'
         'method',
@@ -104,14 +106,40 @@ def extractMethodologyByTerms(text):
     ]
     word_keys = [w.lower() for w in word_keys]
     sent_text = nltk.sent_tokenize(text.lower())
+    sentences = []
     for sentence in sent_text:
         s = sentence.replace('\n', "")
         if any(substring in s for substring in word_keys):
-            return s
-    return "not found"
+            sentences.append(s.replace("abstract", "").capitalize())
+
+    if len(sentences) > 0:
+        return sentences
+    return ["not found"]
 
 
 def extractMethodology(text):
-    return  extractMethodologyByTerms(text)
+    intro = extractIntro(text)
+    return extractMethodologyByTerms(intro)
 
 
+def extractContributesByTerms(text):
+    word_keys = [
+        'contributes to',
+        'contribute to',
+    ]
+    word_keys = [w.lower() for w in word_keys]
+    sent_text = nltk.sent_tokenize(text.lower())
+    sentences = []
+    for sentence in sent_text:
+        s = sentence.replace('\n', "")
+        if any(substring in s for substring in word_keys):
+            if not "objective" in sentences:
+                sentences.append(s.replace("abstract", "").capitalize())
+
+    if len(sentences) > 0:
+        return sentences
+    return ["not found"]
+
+
+def extractContributes(text):
+    return extractContributesByTerms(text)

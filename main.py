@@ -12,10 +12,13 @@ from nlpUtil import searchBm25
 
 import hashlib
 
-import numpy
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 
 search = ""
 textsTokens = []
+
+most_common = []
 
 def openFile():
     filenames, _ = QFileDialog.getOpenFileNames()
@@ -45,7 +48,7 @@ def search():
     ans = []
     if query != "":
         freq = searchBm25(query, textsTokens)
-        print(freq)
+
         novaFreq = {}
         for idx, item in enumerate(freq):
             novaFreq.update({idx: item})
@@ -53,7 +56,7 @@ def search():
         list_Index = {k: v for k, v in sorted(novaFreq.items(), key=lambda item: item[1], reverse=True)}
 
         for i in list_Index:
-            if(novaFreq[i] != 0):
+            if novaFreq[i] != 0:
                 ans.append(datas[i])
     else:
         ans = datas
@@ -83,10 +86,11 @@ def updateTable(datasForTable):
         row += 1
 
 def loadItensFromFile():
-    texts = []
     try:
         with open('data.txt', 'r') as myfile:
             data = myfile.read()
+            loads = json.loads(data)
+            print(loads)
         return json.loads(data)
     except:
         return []
@@ -105,12 +109,25 @@ def itemClicked(item):
 
     article.labelTitle.setText(item['title'])
     article.textObjective.setText(item['objective'])
-    article.textMethod.setText(item['method'])
-    article.textMethod.setText(item['problem'])
+    article.textMethod.setText("\n\n ".join(item['method']))
+    article.textProblem.setText("\n\n ".join(item['problem']))
+    article.textContribute.setText("\n\n ".join(item['contributes']))
+    article.textReference.setText(item['references'])
+    article.setWindowTitle(item['title'])
+    article.labelPath.setText(item['path'])
 
-    print("oi")
+    article.pushShowFreq.clicked.connect(lambda: showWordCloud(item['most_common']))
 
     article.show()
+
+def showWordCloud(most_common):
+    wordcloud = WordCloud(width=800, height=400, background_color='white').generate_from_frequencies(dict(most_common))
+
+    # Display the generated word cloud
+    plt.figure(figsize=(10, 5))
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis('off')
+    plt.show()
 
 if __name__ == "__main__":
     datas = loadItensFromFile()
