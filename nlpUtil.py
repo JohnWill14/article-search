@@ -85,6 +85,8 @@ def prepareText(text):
     return lemma
 
 def perform(path):
+    nltk.download('punkt')
+    nltk.download('wordnet')
     print(path)
 
     # info

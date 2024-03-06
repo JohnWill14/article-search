@@ -117,7 +117,7 @@
     "contributes": [
       "Moreover, the dispersion of the boxes determines different values for each writer, which positively contributes to identification."
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/1 - Off line writer identification based on graphometric parameters.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/1 - Off line writer identification based on graphometric parameters.pdf"
   },
   {
     "id": "17cbdc5c37887afab5d610393b00e8def41554d4",
@@ -228,7 +228,7 @@
     "contributes": [
       "not found"
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/2 - Using calligraphies features for off line writer identification.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/2 - Using calligraphies features for off line writer identification.pdf"
   },
   {
     "id": "b19b6144493be88c993b5de826ce7d8418e59117",
@@ -346,7 +346,7 @@
     "contributes": [
       "not found"
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/3 - Feature Selection for Forensic Handwriting Identification.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/3 - Feature Selection for Forensic Handwriting Identification.pdf"
   },
   {
     "id": "98992099fa6d12626a45bf2b310b54f76ec692e3",
@@ -464,7 +464,7 @@
     "contributes": [
       "The recognition ratesare then computed based on the 40 writers who did notcontribute to the training of the writer independent classi\ufb01er.two hypotheses have been done here: (1) the approach willgeneralize well for genuine signatures from unknown writer ifthe intra-class variability of \u201cgenuine signatures\u201d is reasonablylow and (2) the elimination of random forgeries (e.g., low falsepositive rate) results in a good detection of simple forgeriesaccording to the nature of this class of forgeries."
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/4 - Ensemble of Classifiers for Offline Signature Verification.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/4 - Ensemble of Classifiers for Offline Signature Verification.pdf"
   },
   {
     "id": "c83ef220befb0de7730712b0372e0167df847bc5",
@@ -599,7 +599,7 @@
     "contributes": [
       "not found"
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/5 - Forensic Validation of Biometrics Using Dynamic Handwritten Signatures.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/5 - Forensic Validation of Biometrics Using Dynamic Handwritten Signatures.pdf"
   },
   {
     "id": "9995e576aa7ae92b142caf8cc16dbdf55ff6e23f",
@@ -707,7 +707,7 @@
     "contributes": [
       "not found"
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/6 - Quantitative Evaluation of Features for Forensic Handwriting Examination.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/6 - Quantitative Evaluation of Features for Forensic Handwriting Examination.pdf"
   },
   {
     "id": "45adfe446b153207b3342316458202f8ec863645",
@@ -826,7 +826,7 @@
     "contributes": [
       "Our special aim is to contribute to the scientific background of examination of handedness in forensic handwriting examination."
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/7 - Handedness Detection of Online Handwriting based on Horizontal Strokes.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/7 - Handedness Detection of Online Handwriting based on Horizontal Strokes.pdf"
   },
   {
     "id": "3a27a3a87f5311823b59f306d706ee4b0003ab00",
@@ -940,7 +940,7 @@
     "contributes": [
       "not found"
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/8 - Handwriting Forgery Detection Based on Ink Colour Features.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/8 - Handwriting Forgery Detection Based on Ink Colour Features.pdf"
   },
   {
     "id": "9b4c837787d870b5d065ff408baeeb1c4f850c74",
@@ -1040,7 +1040,7 @@
     "contributes": [
       "not found"
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/9 - Writer verification in forensic handwriting examination.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/9 - Writer verification in forensic handwriting examination.pdf"
   },
   {
     "id": "6afdc182ac529bd610eb787fcb97a4eed7f044bb",
@@ -1150,6 +1150,6 @@
     "contributes": [
       "not found"
     ],
-    "path": "/home/johnwill14/PycharmProjects/pythonProject/papers/Artigos IEEE - Forense/10 - Forensic handwriting examination and human factors Improving the practice through automation and expert training.pdf"
+    "path": "C:/Users/johnw/Desktop/Artigos IEEE - Forense/10 - Forensic handwriting examination and human factors Improving the practice through automation and expert training.pdf"
   }
 ]
