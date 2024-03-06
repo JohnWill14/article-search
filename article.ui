@@ -92,7 +92,7 @@
        <widget class="QTextEdit" name="textObjective">
         <property name="font">
          <font>
-          <pointsize>17</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="textInteractionFlags">
@@ -121,7 +121,7 @@
         </property>
         <property name="font">
          <font>
-          <pointsize>17</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="textInteractionFlags">
@@ -147,7 +147,7 @@
        <widget class="QTextEdit" name="textProblem">
         <property name="font">
          <font>
-          <pointsize>17</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="textInteractionFlags">
@@ -176,7 +176,7 @@
         </property>
         <property name="font">
          <font>
-          <pointsize>17</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="textInteractionFlags">
@@ -202,7 +202,7 @@
        <widget class="QTextEdit" name="textReference">
         <property name="font">
          <font>
-          <pointsize>17</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="textInteractionFlags">
